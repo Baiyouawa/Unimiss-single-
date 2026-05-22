@@ -1,0 +1,36 @@
+[workspace]
+name = "unimiss"
+version = "0.1.0"
+platforms = ["linux-64"]
+channels = [
+    "https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge"
+]
+
+[tasks.run-iaq-mix-20]
+cmd = "python run.py --dataset italy_air_quality --mask_type mix --missing_rate 0.2 --epochs 60 --period_len 24 --gate_temperature 1"
+description = "Example: UniMiss on IAQ, mix mask, 20% missing rate"
+
+[system-requirements]
+cuda = "12.0"
+
+[dependencies]
+python = "==3.10.16"
+pip = "==25.2"
+
+[pypi-options]
+index-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+
+[pypi-dependencies]
+torch = "==2.8.0"
+torchvision = "==0.23.0"
+numpy = "==1.26.4"
+pandas = "==1.5.3"
+scipy = "==1.10.1"
+scikit-learn = "==1.6.1"
+tqdm = "==4.67.1"
+pyyaml = "==6.0.3"
+h5py = ">=3.9.0"
+tsdb = ">=0.7.1"
+pygrinder = ">=0.7.0"
+benchpots = ">=0.4.0"
+pypots = "*"

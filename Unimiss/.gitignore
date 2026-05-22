@@ -1,0 +1,6 @@
+.pixi/
+outputs/
+results_main.md
+__pycache__/
+*.pyc
+.pytest_cache/
